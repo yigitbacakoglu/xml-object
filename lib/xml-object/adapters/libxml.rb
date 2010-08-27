@@ -1,4 +1,4 @@
-require 'libxml'
+require 'libxml' unless defined?(JRUBY_VERSION) # JRuby already has it...
 
 module XMLObject::Adapters::LibXML
   # Can take a String of XML data, or anything that responds to
