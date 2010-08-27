@@ -26,9 +26,7 @@ And with the following optionals:
 
 == Installation instructions
 
-From Gemcutter's gem server (soon to be the new Rubyforge):
-
-  gem install xml-object --source http://gemcutter.org
+  gem install xml-object
 
 == Example usage
 
