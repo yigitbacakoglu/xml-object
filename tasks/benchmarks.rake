@@ -69,7 +69,7 @@ namespace :bm do
                     :prep_time, :cook_time
     end
 
-    recipe_xml = File.read 'benchmarks/recipe.xml'
+    recipe_xml = File.read(File.dirname(__FILE__) + '/benchmarks/recipe.xml')
 
     Benchmark.bmbm do |x|
       begin
