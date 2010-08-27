@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/test_helper'
+require 'test_helper'
 
 class RegressionsTest < XMLObject::TestCase
   def test_behaviour_of_bug_sample_rating_dot_xml

@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/test_helper'
+require 'test_helper'
 
 # no need to test on both adapters, so this one extends Test::Unit::TestCase
 class CarbonFootprintTest < Test::Unit::TestCase

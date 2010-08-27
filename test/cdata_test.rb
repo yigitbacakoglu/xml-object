@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/test_helper'
+require 'test_helper'
 
 class CDATATest < XMLObject::TestCase
   def test_multiple_CDATA_blocks

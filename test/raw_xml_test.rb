@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/test_helper'
+require 'test_helper'
 
 class RawXML < XMLObject::TestCase
   def test_raw_xml_method

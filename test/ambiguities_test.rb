@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/test_helper'
+require 'test_helper'
 
 class AmbiguitiesTest < XMLObject::TestCase
   def test_ambiguity_of_element_and_attribute_name

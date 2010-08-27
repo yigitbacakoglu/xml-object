@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/test_helper'
+require 'test_helper'
 
 class ArrayAutoFoldingTest < XMLObject::TestCase
   def test_array_auto_folding

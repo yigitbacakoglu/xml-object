@@ -30,20 +30,22 @@ puts
 
 module XMLObject
   class TestCase < Test::Unit::TestCase
-    # This makes descendants of this class use Test::Unit::TestCase#run, and
-    # it makes this class not run at all in test suites.
+    # This makes descendants of this class use Test::Unit::TestCase#run,
+    # and it makes this class not run at all in test suites.
     #
-    # It also handle running each test suite under both XML adapters.
+    # It also handles running each test suite under both XML adapters.
     #
     def run(*args, &block)
       return if self.class == XMLObject::TestCase
 
       XMLObject.adapter = XMLObject::Adapters::REXML
-      super
+      rexml_run_result  = super # save for later
 
       if defined? ::LibXML
         XMLObject.adapter = XMLObject::Adapters::LibXML
         super
+      else
+        rexml_run_result # not returning this messes up output in 1.9
       end
     end
   end

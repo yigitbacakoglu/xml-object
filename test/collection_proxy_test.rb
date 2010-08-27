@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/test_helper'
+require 'test_helper'
 
 class CollectionProxyTest < XMLObject::TestCase
   def test_behaviour_of_collection_proxy
