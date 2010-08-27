@@ -1,4 +1,5 @@
 * 0.9.93 (?):
+  - Rubinius support (tested with REXML only)
   - 1.9.2 support
 
 * 0.9.92 (2009-10-29):
