@@ -1,8 +1,12 @@
 require 'test/unit'
 require 'xml-object'
 
-%w[ activesupport libxml ruby-debug leftright ].each do |library|
-  begin; require library; rescue LoadError; nil; end
+%w[ active_support libxml ruby-debug leftright ].each do |library|
+  begin
+    require library
+  rescue LoadError
+    nil
+  end
 end
 
 puts
