@@ -21,8 +21,8 @@ module XMLObject
   # Takes any adapter Element object, and converts it recursively into
   # the corresponding tree of decorated objects.
   def self.new_decorated_obj(xml) # :nodoc:
-    # More than one child, empty value, and all children with the same name?
-    obj = if xml.children.size > 1 && xml.value !~ /\S/ &&
+    # More than one child, empty value, and all children with the same name? or if specified as array
+    obj = if xml.attributes['type'] == "array" || xml.children.size > 1 && xml.value !~ /\S/ &&
              xml.children.map { |c| c.name }.uniq.size == 1
 
       CollectionProxy.new xml # This is an empty array wrap
